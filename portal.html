@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G-Operations | Customer Portal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      width: 90%;
+      max-width: 430px;
+      background: #172238;
+      padding: 30px;
+      border-radius: 14px;
+      box-sizing: border-box;
+    }
+    h1 { color: #60a5fa; }
+    input, button, textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 13px;
+      margin: 8px 0;
+      border-radius: 7px;
+      border: 1px solid #40516b;
+      font-size: 15px;
+    }
+    input, textarea {
+      background: #0b1220;
+      color: white;
+    }
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover { background: #1d4ed8; }
+    .hidden { display: none; }
+    #message { color: #93c5fd; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>G-Operations</h1>
+    <p>Customer Business Portal</p>
+
+    <section id="auth">
+      <h2>Customer Registration</h2>
+      <input id="name" placeholder="Full name">
+      <input id="email" type="email" placeholder="Email address">
+      <input id="password" type="password" placeholder="Password">
+      <button id="register">Create Account</button>
+
+      <hr>
+
+      <h2>Customer Login</h2>
+      <input id="loginEmail" type="email" placeholder="Email address">
+      <input id="loginPassword" type="password" placeholder="Password">
+      <button id="login">Login</button>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <h2>Customer Dashboard</h2>
+      <p id="welcome"></p>
+      <input id="service" placeholder="Service type">
+      <textarea id="description" placeholder="Describe your requirements"></textarea>
+      <button id="submitRequest">Submit Service Request</button>
+      <h3>My Requests</h3>
+      <div id="requests"></div>
+      <button id="logout">Logout</button>
+    </section>
+
+    <p id="message" role="status"></p>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="portal.js"></script>
+</body>
+</html>
