@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G-Operations | Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+</head>
+<body>
+  <main class="container">
+    <h1>G-Operations</h1>
+    <p>Administrator Dashboard</p>
+
+    <section id="loginSection">
+      <h2>Admin Login</h2>
+      <input id="email" type="email" placeholder="Admin email">
+      <input id="password" type="password" placeholder="Password">
+      <button id="loginBtn">Login</button>
+      <p id="message"></p>
+    </section>
+
+    <section id="dashboard" hidden>
+      <h2>Service Requests</h2>
+      <p id="welcome"></p>
+      <button id="refreshBtn">Refresh Requests</button>
+      <div id="requests">Loading requests...</div>
+      <button id="logoutBtn">Logout</button>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
