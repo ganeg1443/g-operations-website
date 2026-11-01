@@ -32,9 +32,10 @@ async function loadRequests(user) {
     .eq("user_id", user.id)
     .order("created_at", { ascending: false });
 
-  if (error) {
-    list.textContent = "Could not load requests.";
-    return;
+if (error) {
+  list.textContent = "Database error: " + error.message;
+  return;
+}
   }
 
   list.replaceChildren();
